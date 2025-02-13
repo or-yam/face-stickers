@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Face Detection Web App</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body
+    class="m-0 flex h-screen flex-col items-center justify-center bg-yellow-500 p-5"
+  >
+    <div
+      class="flex h-full w-full flex-col items-center justify-between gap-4 rounded-lg bg-red-500 p-10 text-center shadow-2xl"
+    >
+      <h1 class="mb-4 text-2xl font-bold">DBZ Filters</h1>
+      <div id="videoContainer" class="relative w-full max-w-[640px]">
+        <video id="videoInput" class="w-full max-w-[640px] rounded-lg"></video>
+        <canvas
+          id="outputCanvas"
+          class="pointer-events-none absolute top-0 left-0 w-full max-w-[640px] rounded-lg"
+        ></canvas>
+      </div>
+      <div id="controls" class="mt-4 flex justify-center gap-3">
+        <div class="flex flex-col items-center gap-2">
+          <label for="faceSelect" class="text-yellow-500">Hair</label>
+          <select
+            id="hairSelect"
+            class="rounded-lg bg-white px-2 py-2 text-gray-800 shadow-md"
+          ></select>
+        </div>
+
+        <div class="flex flex-col items-center gap-2">
+          <label for="auraSelect" class="text-yellow-500"> Aura </label>
+          <select
+            id="auraSelect"
+            class="rounded-lg bg-white px-2 py-2 text-gray-800 shadow-md"
+          ></select>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
