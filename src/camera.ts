@@ -8,8 +8,10 @@ export async function setupCamera({
   try {
     const stream = await navigator.mediaDevices.getUserMedia({
       video: {
-        width: displaySize.width,
-        height: displaySize.height,
+        // width: displaySize.width,
+        // height: displaySize.height,
+        width: { max: displaySize.width, ideal: 1280 },
+        height: { max: displaySize.height, ideal: 720 },
         facingMode: "user",
       },
     });
