@@ -6,7 +6,7 @@ import {
   resizeResults,
   TinyFaceDetectorOptions,
 } from "face-api.js";
-import { drawAura, drawHair } from "./draw";
+import { drawAura, drawBox, drawHair } from "./draw";
 
 const displaySize = { width: 640, height: 480 };
 
@@ -75,6 +75,7 @@ async function detectFaces() {
     const landmarks = detection.landmarks;
     const box = detection.detection.box;
 
+    drawBox({ ctx, box });
     if (hairImage) drawHair({ box, ctx, image: hairImage, landmarks });
     if (auraImage) drawAura({ box, ctx, image: auraImage, landmarks });
   });
