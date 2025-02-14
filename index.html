@@ -13,11 +13,17 @@
       class="flex h-full w-full flex-col items-center justify-between gap-4 rounded-lg bg-red-500 p-10 text-center shadow-2xl"
     >
       <h1 class="mb-4 text-2xl font-bold">DBZ Filters</h1>
-      <div id="videoContainer" class="relative w-full max-w-[640px]">
-        <video id="videoInput" class="w-full max-w-[640px] rounded-lg"></video>
+      <div
+        id="videoContainer"
+        class="relative max-h-[480px] w-full max-w-[640px]"
+      >
+        <video
+          id="videoInput"
+          class="max-h-[480px] w-full max-w-[640px] rounded-lg"
+        ></video>
         <canvas
           id="outputCanvas"
-          class="pointer-events-none absolute top-0 left-0 w-full max-w-[640px] rounded-lg"
+          class="pointer-events-none absolute top-0 left-0 max-h-[480px] w-full max-w-[640px] rounded-lg"
         ></canvas>
       </div>
       <div id="controls" class="mt-4 flex justify-center gap-3">
